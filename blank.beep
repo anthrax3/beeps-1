@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# notes contains pitch data for C3 to C8
+source src/notes.sh
+# tempo(160/120/90) contains note and rest length data
+# includes whole, dotted half, half, dotted quarter, quarter,
+#   dotted eighth, eighth, sixteenth, triplethalf,
+#   tripletquarter, tripleteighth, tripletsixteenth
+source src/tempo160.sh
+
+# format is $notelength $pitch $restlength -n (for next note)
+beep \
+$quarter $G4 $norest -n \
+$quarter $C5 $norest
