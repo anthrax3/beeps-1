@@ -2,11 +2,13 @@
 
 # notes contains pitch data for C3 to C8
 source src/notes.sh
-# tempo(160/120/90) contains note and rest length data
+
+# tempo.sh contains note and rest length data based on $tempo
 # includes whole, dotted half, half, dotted quarter, quarter,
 #   dotted eighth, eighth, sixteenth, triplethalf,
 #   tripletquarter, tripleteighth, tripletsixteenth
-source src/tempo90.sh
+tempo=90
+source src/tempo.sh
 
 # format is $notelength $pitch $restlength -n (for next note)
 beep \
